@@ -1,0 +1,47 @@
+
+# preliminaries ================================================================
+1 step into the container using your jupyterhub link from thomas mayne
+2 open a terminal from within jupyterhub
+3 run "/bin/bash + ENTER" to use the bash terminal
+4 run the johann-first.sh or copy/paste it's content to the terminal
+
+# 1 ============================================================================
+
+johann-first.sh 
+1 FIRST edit this file at the position marked "@Johann"
+2 run /bin/bash johann-first.sh 
+3 this file creates some folders and downloads some content from gitlab and google-drive
+4 please DO NOT change the directory after you ran this file
+5 the files which are required below are available after you ran johann-first.sh
+
+# 2 you have to make a choice, because I'm not sure what you prefer ============
+
+johann-setup.sh
+1 run bin/bash johann-setup.sh
+2 installs SHAP and other packages
+
+OR
+
+johann-setup_conda.sh
+1 run /bin/bash
+2 creates a conda environment and installs all requirements
+3 installs SHAP and other packages
+
+# 3 run a few tests ============================================================
+
+# test1 and test2 shall just run without prompting any errors, that's it
+# test3 should generate a file in models/shap (e.g. shap_explainer....py )-> please check if so
+
+python johann-test1_xgboost.py 
+python johann-test2_keras.py
+python johann-test3_all.py
+
+# 4 tidy up data from tests ====================================================
+
+rm models/shap/*
+
+# 4 train SHAP =================================================================
+
+train_shap.sh
+1 start a screen, eg. "screen -R shap"
+2 run /bin/bash train_shap.sh -> will train 9 models in a sequence -> generate 9 files
