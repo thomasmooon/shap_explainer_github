@@ -7,33 +7,25 @@
 
 # 1 ============================================================================
 
-johann-first.sh 
-1 FIRST edit this file at the position marked "@Johann"
-2 run /bin/bash johann-first.sh 
-3 this file creates some folders and downloads some content from gitlab and google-drive
-4 please DO NOT change the directory after you ran this file
-5 the files which are required below are available after you ran johann-first.sh
+# 1. edit `johann-first.sh ` file at the position marked "@Johann"
 
-# 2 you have to make a choice, because I'm not sure what you prefer ============
+# 2. this creates some folders and downloads some content from gitlab and google-drive
+# please DO NOT change the directory after you ran it
+/bin/bash johann-first.sh 
 
-johann-setup.sh
-1 run bin/bash johann-setup.sh
-2 installs SHAP and other packages
+# the files which are required below are available after you ran `johann-first.sh`
 
-OR
+# 2 install SHAP and other pckgs ===============================================
 
-johann-setup_conda.sh
-1 run /bin/bash
-2 creates a conda environment and installs all requirements
-3 installs SHAP and other packages
+# run this to install SHAP and other pckgs
+bin/bash johann-setup.sh 
 
 # 3 run a few tests ============================================================
 
-# test1 and test2 shall just run without prompting any errors, that's it
-# test3 should generate a file in models/shap (e.g. shap_explainer....py )-> please check if so
-
-python johann-test1_xgboost.py 
+# this shall just run without prompting any errors, that's it
 python johann-test2_keras.py
+
+# should generate a file in models/shap (e.g. shap_explainer....py )-> please check if so
 python johann-test3_all.py
 
 # 4 tidy up data from tests ====================================================
@@ -42,6 +34,10 @@ rm models/shap/*
 
 # 4 train SHAP =================================================================
 
-train_shap.sh
-1 start a screen, eg. "screen -R shap"
-2 run /bin/bash train_shap.sh -> will train 9 models in a sequence -> generate 9 files
+# 1. start a screen, eg.
+screen -R shap
+
+# 2. run `/bin/bash train_shap.sh` -> will train 9 models in a sequence
+# and should generate 9 files in ./models/keras. this will take some hours to finish
+/bin/bash train_shap.sh
+
