@@ -1,0 +1,54 @@
+# featurematrix mh1_fu1_CNN1D_subdomain.h5 
+# -----------------------------------------------------------------------------
+
+# thomas' path
+E610046/TGDL-data/data/mh1_fu1_CNN1D_subdomain.h5 
+
+# johann's path
+/root/work/data/mh1_fu1_CNN1D_subdomain.h5
+
+# finalmodels
+# -----------------------------------------------------------------------------
+
+# thomas' path
+E610046/TGDL-data/src/AWS_finalmodel/q30_train_finalmodel/results
+.
+├── finalmodel_Anxiety_MAXEPOCHS200.h5
+├── finalmodel_Anxiety_MAXEPOCHS200.json
+├── finalmodel_Anxiety_MAXEPOCHS200.txt
+├── finalmodel_Bipolar.Schizophrenia_MAXEPOCHS200.h5
+├── finalmodel_Bipolar.Schizophrenia_MAXEPOCHS200.json
+├── finalmodel_Bipolar.Schizophrenia_MAXEPOCHS200.txt
+├── finalmodel_Depression_MAXEPOCHS200.h5
+├── finalmodel_Depression_MAXEPOCHS200.json
+├── finalmodel_Depression_MAXEPOCHS200.txt
+├── finalmodel_Diabetes_MAXEPOCHS200.h5
+├── finalmodel_Diabetes_MAXEPOCHS200.json
+├── finalmodel_Diabetes_MAXEPOCHS200.txt
+├── finalmodel_Hyperlipidemia_MAXEPOCHS200.h5
+├── finalmodel_Hyperlipidemia_MAXEPOCHS200.json
+├── finalmodel_Hyperlipidemia_MAXEPOCHS200.txt
+├── finalmodel_Hypertension_MAXEPOCHS200.h5
+├── finalmodel_Hypertension_MAXEPOCHS200.json
+├── finalmodel_Hypertension_MAXEPOCHS200.txt
+├── finalmodel_Migraine_MAXEPOCHS200.h5
+├── finalmodel_Migraine_MAXEPOCHS200.json
+├── finalmodel_Migraine_MAXEPOCHS200.txt
+├── finalmodel_Overweight_MAXEPOCHS200.h5
+├── finalmodel_Overweight_MAXEPOCHS200.json
+├── finalmodel_Overweight_MAXEPOCHS200.txt
+├── finalmodel_Stroke.IschemAttack_MAXEPOCHS200.h5
+├── finalmodel_Stroke.IschemAttack_MAXEPOCHS200.json
+└── finalmodel_Stroke.IschemAttack_MAXEPOCHS200.txt
+
+# johann's path
+/root/src/AWS_finalmodel/q30_train_finalmodel/results
+
+# censored.incident.cvsamp.csv 
+# -----------------------------------------------------------------------------
+
+# thomas' path
+E610046/TGDL-data/data/censored.incident.cvsamp.csv
+
+# johann's path
+/root/data/censored.incident.cvsamp.csv

@@ -1,43 +1,24 @@
 
-# preliminaries ================================================================
+# preliminaries ===============================================================
 1 step into the container using your jupyterhub link from thomas mayne
 2 open a terminal from within jupyterhub
 3 run "/bin/bash + ENTER" to use the bash terminal
-4 run the johann-first.sh or copy/paste it's content to the terminal
 
-# 1 ============================================================================
+# setup + tests ===============================================================
+/bin/bash johann-first.sh # initialize folder, download content
+/bin/bash johann-setup.sh # installs SHAP and other pckgs
+python johann-test2_keras.py # test1: runs without prompting error?
+python johann-test3_all.py # test2: please check if file. /models/shap/shap_explainer*.pkl file is created?
+rm models/shap/* # tidy up test data
 
-# 1. edit `johann-first.sh ` file at the position marked "@Johann"
+# 4 train SHAP ================================================================
 
-# 2. this creates some folders and downloads some content from gitlab and google-drive
-# please DO NOT change the directory after you ran it
-/bin/bash johann-first.sh 
+# run using a screen
+screen -R shap 
+# train 6 models in a sequence stored in ./models/keras. This might take a day or longer
+/bin/bash train_shap.sh 
 
-# the files which are required below are available after you ran `johann-first.sh`
-
-# 2 install SHAP and other pckgs ===============================================
-
-# run this to install SHAP and other pckgs
-bin/bash johann-setup.sh 
-
-# 3 run a few tests ============================================================
-
-# this shall just run without prompting any errors, that's it
-python johann-test2_keras.py
-
-# should generate a file in models/shap (e.g. shap_explainer....py )-> please check if so
-python johann-test3_all.py
-
-# 4 tidy up data from tests ====================================================
-
-rm models/shap/*
-
-# 4 train SHAP =================================================================
-
-# 1. start a screen, eg.
-screen -R shap
-
-# 2. run `/bin/bash train_shap.sh` -> will train 9 models in a sequence
-# and should generate 9 files in ./models/keras. this will take some hours to finish
-/bin/bash train_shap.sh
+# final step ==================================================================
+# please send me the 6 files in ./models/shap/
+# THANK YOU
 
