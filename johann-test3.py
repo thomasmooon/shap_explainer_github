@@ -50,11 +50,15 @@ if PARAMS['COMORB'] == "Hypertension":
 else:
     model = shap_boot.reloadModel(PARAMS, custom_loss) 
 
+# load data + train shap explainer 
+shap_explainer = shap_boot.shap_bootstrap(model, PARAMS)
 
-# output model summary
-model.summary()
-
-# expected output (last 3 lines):
-# Total params: 211,328
-# Trainable params: 211,062
-# Non-trainable params: 266
+# save shap explainer model
+fname = PARAMS['savepath'] + "shap_explainer-" + PARAMS['COMORB'] + ".pkl"
+with open(fname , 'wb') as filename:
+    pickle.dump(
+        {
+            'PARAMS' : PARAMS,
+            'shap_explainer' : shap_explainer
+        }, 
+        filename)

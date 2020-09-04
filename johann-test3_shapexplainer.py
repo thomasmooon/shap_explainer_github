@@ -50,11 +50,5 @@ if PARAMS['COMORB'] == "Hypertension":
 else:
     model = shap_boot.reloadModel(PARAMS, custom_loss) 
 
-
-# output model summary
-model.summary()
-
-# expected output (last 3 lines):
-# Total params: 211,328
-# Trainable params: 211,062
-# Non-trainable params: 266
+# load data + train shap explainer 
+shap_explainer = shap_boot.shap_bootstrap(model, PARAMS)
