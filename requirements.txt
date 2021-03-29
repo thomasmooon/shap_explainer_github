@@ -67,7 +67,7 @@ pyasn1==0.4.4
 pycparser==2.18
 pydot==1.2.4
 pydot-ng==1.0.0
-Pygments==2.2.0
+Pygments==2.7.4
 # pygobject==3.26.1 # version not longer in pypy
 pyOpenSSL==18.0.0
 pyparsing==2.2.0
