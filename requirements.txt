@@ -91,7 +91,7 @@ snowballstemmer==1.2.1
 Sphinx==1.7.6
 sphinxcontrib-websupport==1.1.0
 # tensorflow-gpu==1.9.0
-tensorflow==1.9.0 # if no gpus available
+tensorflow==2.7.2 # if no gpus available
 # tensorboard==1.9.0
 termcolor==1.1.0
 terminado==0.8.1
