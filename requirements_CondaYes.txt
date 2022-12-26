@@ -102,7 +102,7 @@ urllib3==1.23
 wcwidth==0.1.7
 webencodings==0.5.1
 Werkzeug==0.14.1
-wheel==0.31.1
+wheel==0.38.1
 widgetsnbextension==3.3.1
 zmq==0.0.0
 git+git://github.com/slundberg/shap.git@41873154561cfa059fa8ed1fc8dec1095b1de9d1#egg=shap
