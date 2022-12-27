@@ -83,7 +83,7 @@ requests==2.19.1
 scikit-image==0.14.0
 scipy==1.1.0
 Send2Trash==1.5.0
-setuptools==39.1.0
+setuptools==65.5.1
 simplegeneric==0.8.1
 six==1.11.0
 snowballstemmer==1.2.1
